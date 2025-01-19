@@ -8,6 +8,6 @@ from llama_index.llms.openai import OpenAI
 load_dotenv()
 
 openai_api_key = os.getenv('OPENAI_API_KEY')
-embedding_model = OpenAIEmbedding(
+embed_model = OpenAIEmbedding(
     api_key = openai_api_key, model = OpenAIEmbeddingModelType.TEXT_EMBED_3_LARGE)
 llm_model = OpenAI(api_key = openai_api_key, model = 'gpt-4o-mini')
