@@ -9,7 +9,7 @@ from index_manager_pinecone import IndexManagerPinecone
 @st.cache_resource   #decorator
 def initialize_agent():
     #index_manager = IndexManager(embed_model) #used when the index in store locally 
-    index_manager = IndexManagerPinecone(embed_model) #used when the index is stored in the pinecone cloud storage
+    index_manager = IndexManagerPinecone(embed_model,index_name = "arxiv-research") #used when the index is stored in the pinecone cloud storage
     index = index_manager.retreive_index()
     return Agent(index,llm_model)
 
