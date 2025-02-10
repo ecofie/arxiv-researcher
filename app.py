@@ -26,7 +26,7 @@ st.title("Research Paper Chatbot")
 #Display chat messages
 for message in st.session_state.message:
     with st.chat_message(message["role"]):
-        st.markdown(message["text"])
+        st.markdown(message["content"])
         
 if prompt := st.chat_input("Ask me anything about research paper:"):
     st.session_state.message.append({"role":"user","content":prompt})

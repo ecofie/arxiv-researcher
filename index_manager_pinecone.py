@@ -21,6 +21,7 @@ class IndexManagerPinecone(IndexManager):
         self.storage_context = StorageContext.from_defaults(
              vector_store=self.vector_store
         )
+    
     #create the index and store it in pinecone
     def create_index(self):
         self.documents = []
